@@ -1,12 +1,28 @@
-# React + Vite
+# EXPENSE-TRACKER WITH REACT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## APP.JSX
 
-Currently, two official plugins are available:
+- the parent component that holds the shared state(expenses) and renders both:
+- THe Form
+- The Table
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## FORM.JSX
 
-## Expanding the ESLint configuration
+- The components that contains:
+- Expense name
+- Expense description
+- Expense category
+- Expense Amount
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## EXPENSETABLE.JSX
+
+- The component that:
+- Receives the list of expenses as props from App
+- Renders them as rows in a table
+
+## APP LOGIC FLOW:
+
+1. App.jsx holds the list of expenses in state using useState([])
+2. Form.jsx collects form input and passes a new expense object up to App
+3. App.jsx updates the list using setExpenses([...expenses, newExpense])
+4. ExpenseTable.jsx receives the updated list and renders the table.
