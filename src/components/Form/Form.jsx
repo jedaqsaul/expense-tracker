@@ -25,13 +25,15 @@ export default function Form() {
   //handle submitted data
   const handleSubmit = (event) => {
     event.preventDefault(); // this is to stop refresh
-    setSubmittedData(formData); //Here store data for later display
+
+    onAddExpense(formData); //send data upto the app
+
     setFormData({ name: "", description: "", category: "", amount: "" }); // reset the inputs after submission
   };
 
   return (
     <div className="form-container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <h2>Enter expense info</h2>
         <input
           type="text"

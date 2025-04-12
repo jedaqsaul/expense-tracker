@@ -10,8 +10,8 @@ export default function App() {
   };
   return (
     <div className="app">
-      <Form />
-      <ExpenseTable data={submittedData} />
+      <Form onAddExpense={handleAddExpense} />
+      <ExpenseTable data={expenses} />
     </div>
   );
 }
