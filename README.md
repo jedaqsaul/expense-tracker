@@ -71,3 +71,14 @@
 - handleSearchChange Updates the searchQuery as user types
 - filteredStudents Only expenses whose name matches search
 - value + onChange Makes it a controlled input field
+
+### Add a delete expense functionality
+
+- Add a delete button beside each expense row in the table
+- When clicked, it removes that expense from the list
+
+#### what we need
+
+- A handleDelete function App.jsx
+- Pass that function to ExpenseTable.jsx
+- Add a delete button in each table row, and hook it up

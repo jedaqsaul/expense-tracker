@@ -14,6 +14,12 @@ export default function App() {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
+  const handleDelete = (nameToDelete) => {
+    const updatedList = expenses.filter(
+      (expense = expenses.name !== nameToDelete)
+    );
+    setExpenses(updatedList);
+  };
 
   //Filter expenses based on search
   const filteredExpenses = expenses.filter((expense) =>
@@ -32,7 +38,7 @@ export default function App() {
           className="search-bar"
         />
       </div>
-      <ExpenseTable data={filteredExpenses} />
+      <ExpenseTable data={filteredExpenses} onDelete={handleDelete} />
     </div>
   );
 }
