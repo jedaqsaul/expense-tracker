@@ -4,10 +4,9 @@
   border-spacing: 0;
   overflow: hidden;
   border-radius: 10px;
+  background-color: white;
 }
-.table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
+
 .delete-button {
   padding: 5px 30px;
   color: white;
@@ -16,6 +15,5 @@
   border-radius: 4px;
 }
 .table thead {
-  background-color: black;
-  color: white;
+  background-color: rgb(251, 255, 30);
 }

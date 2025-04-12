@@ -14,16 +14,17 @@
 }
 .form h2 {
   font-size: 30px;
+  color: white;
 }
 .form p {
-  color: gray;
+  color: rgb(251, 255, 30);
   font-size: 14px;
 }
 .form button {
   padding: 10px 20px;
   border: none;
-  color: white;
-  background-color: black;
+
+  background-color: rgb(251, 255, 30);
   border-radius: 6px;
   font-weight: bold;
 }

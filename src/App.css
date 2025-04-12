@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,19 +8,21 @@
 .app {
   gap: 10px;
   padding: 10px;
+  background-color: rgb(7, 39, 65);
 }
 .header {
-  background-color: lightblue;
   width: 500px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 .title {
   font-weight: 700;
   margin-bottom: 7px;
   font-size: 55px;
+  color: white;
+  font-family: "Permanent Marker", cursive;
 }
 .app-description {
-  color: gray;
+  color: rgb(251, 255, 30);
   line-height: 20px;
   font-size: 16px;
   width: 370px;
@@ -36,7 +39,7 @@
   gap: 20px;
 }
 .form-container {
-  border: 1px solid black;
+  border: 1px solid rgb(255, 252, 252);
   height: 350px;
   border-radius: 20px;
 }
@@ -44,4 +47,9 @@
   height: 100vh;
   border-radius: 20px;
   min-width: 900px;
+}
+.search-bar {
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid gray;
 }
