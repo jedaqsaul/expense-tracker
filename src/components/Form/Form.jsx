@@ -9,6 +9,16 @@ export default function Form() {
     category: "",
     amount: "",
   });
+
+  //Handle change for each input
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <form>
       <h2>Enter expense info</h2>
