@@ -82,3 +82,8 @@
 - A handleDelete function App.jsx
 - Pass that function to ExpenseTable.jsx
 - Add a delete button in each table row, and hook it up
+
+#### what it does
+
+- Now each row has a delte button. Clicking it removes that student from the list and re-renders the UI
+- No reload needed.clean.instant

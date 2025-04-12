@@ -1,7 +1,7 @@
 import React from "react";
 import "./ExpenseTable.css";
 
-export default function ExpenseTable({ data }) {
+export default function ExpenseTable({ data, onDelete }) {
   return (
     <div>
       <h2>Expense List</h2>
@@ -13,6 +13,7 @@ export default function ExpenseTable({ data }) {
             <th>Description</th>
             <th>Category</th>
             <th>Amount</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -23,6 +24,9 @@ export default function ExpenseTable({ data }) {
               <td>{expense.description}</td>
               <td>{expense.category}</td>
               <td>{expense.amount}</td>
+              <td>
+                <button onClick={() => onDelete(expense.name)}>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>

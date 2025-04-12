@@ -14,31 +14,45 @@ export default function App() {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
-  const handleDelete = (nameToDelete) => {
-    const updatedList = expenses.filter(
-      (expense = expenses.name !== nameToDelete)
-    );
-    setExpenses(updatedList);
-  };
 
   //Filter expenses based on search
   const filteredExpenses = expenses.filter((expense) =>
     expense.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  const handleDelete = (nameToDelete) => {
+    const updatedList = expenses.filter(
+      (expense) => expense.name !== nameToDelete
+    );
+    setExpenses(updatedList);
+  };
   return (
     <div className="app">
-      <Form onAddExpense={handleAddExpense} />
-
-      <div style={{ flex: 1 }}>
-        <input
-          type="text"
-          placeholder="Search byname"
-          value={searchQuery}
-          onChange={handleSearchChange}
-          className="search-bar"
-        />
+      <div className="header">
+        <h1 className="title">Expense Tracker</h1>
+        <p className="app-description">
+          Start taking control of your finances and Life.Record categorize and
+          analyze your spending
+        </p>
       </div>
-      <ExpenseTable data={filteredExpenses} onDelete={handleDelete} />
+      <div className="hero">
+        <div className="form-container">
+          <Form onAddExpense={handleAddExpense} />
+        </div>
+        <div>
+          <div className="search-bar-container">
+            <input
+              type="text"
+              placeholder="Search byname"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="search-bar"
+            />
+          </div>
+          <div className="table-container">
+            <ExpenseTable data={filteredExpenses} onDelete={handleDelete} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

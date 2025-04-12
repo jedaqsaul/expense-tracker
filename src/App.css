@@ -1,10 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial;
+}
+
 .app {
-  display: flex;
   gap: 10px;
   padding: 10px;
+}
+.header {
+  background-color: lightblue;
+  width: 500px;
+  margin-bottom: 70px;
+}
+.title {
+  font-weight: 700;
+  margin-bottom: 7px;
+  font-size: 55px;
+}
+.app-description {
+  color: gray;
+  line-height: 20px;
+  font-size: 16px;
+  width: 370px;
 }
 .search-bar {
   margin-bottom: 16px;
   padding: 8px;
   width: 100%;
+}
+
+.hero {
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.form-container {
+  border: 1px solid black;
+  height: 500px;
+  border-radius: 20px;
+}
+.table-container {
+  border: 1px solid black;
+  height: 100vh;
+  border-radius: 20px;
+  min-width: 900px;
 }
