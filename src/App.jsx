@@ -5,6 +5,9 @@ import "./App.css";
 
 export default function App() {
   const [expenses, setExpenses] = useState([]);
+
+  const [searchQuery, setSearchQuery] = useState("");
+
   const handleAddExpense = (newExpense) => {
     setExpenses((prev) => [...prev, newExpense]);
   };

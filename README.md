@@ -52,3 +52,15 @@
 2. Form.jsx collects form input and passes a new expense object up to App
 3. App.jsx updates the list using setExpenses([...expenses, newExpense])
 4. ExpenseTable.jsx receives the updated list and renders the table.
+
+## Additional features
+
+- Add a search input above the table
+- As the user tpes, shows only expensess whose names include the text
+  -Real-time filtering
+
+### What do we need
+
+- State to hold the searchQuery
+- A way to filter the expenses based on that query
+- Add a search input field above the table

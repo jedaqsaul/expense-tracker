@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-export default function Form() {
+export default function Form({ onAddExpense }) {
   //create a state to store input values
   const [formData, setFormData] = useState({
     name: "",
@@ -19,7 +19,6 @@ export default function Form() {
       ...prevData,
       [name]: value,
     }));
-    console.log(formData);
   };
 
   //handle submitted data
