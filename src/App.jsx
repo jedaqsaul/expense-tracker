@@ -11,6 +11,14 @@ export default function App() {
   const handleAddExpense = (newExpense) => {
     setExpenses((prev) => [...prev, newExpense]);
   };
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  //Filter expenses based on search
+  const filteredExpenses = expenses.filter((expense) =>
+    expense.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   return (
     <div className="app">
       <Form onAddExpense={handleAddExpense} />
