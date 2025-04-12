@@ -4,8 +4,7 @@ import "./ExpenseTable.css";
 export default function ExpenseTable({ data, onDelete }) {
   return (
     <div>
-      <h2>Expense List</h2>
-      <table border="1" cellPadding="10">
+      <table border="1" cellPadding="10" className="table">
         <thead>
           <tr>
             <th>#</th>
@@ -25,7 +24,12 @@ export default function ExpenseTable({ data, onDelete }) {
               <td>{expense.category}</td>
               <td>{expense.amount}</td>
               <td>
-                <button onClick={() => onDelete(expense.name)}>Delete</button>
+                <button
+                  onClick={() => onDelete(expense.name)}
+                  className="delete-button"
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}

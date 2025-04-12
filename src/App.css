@@ -31,18 +31,16 @@
 }
 
 .hero {
-  background-color: lightgreen;
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 .form-container {
   border: 1px solid black;
-  height: 500px;
+  height: 350px;
   border-radius: 20px;
 }
 .table-container {
-  border: 1px solid black;
   height: 100vh;
   border-radius: 20px;
   min-width: 900px;
