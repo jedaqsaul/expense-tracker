@@ -63,6 +63,29 @@ export default function Form() {
         />
         <button type="submit">Submit</button>
       </form>
+      <div>
+        <h2>Submitted Info</h2>
+        {submittedData && (
+          <div>
+            <p>
+              <strong>Name:</strong>
+              {submittedData.name}
+            </p>
+            <p>
+              <strong>Description:</strong>
+              {submittedData.description}
+            </p>
+            <p>
+              <strong>Category:</strong>
+              {submittedData.category}
+            </p>
+            <p>
+              <strong>Amount:</strong>
+              {submittedData.amount}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
