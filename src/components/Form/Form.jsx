@@ -41,6 +41,7 @@ export default function Form() {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
+          required
         />
         <input
           type="text"
@@ -48,6 +49,7 @@ export default function Form() {
           placeholder="Description"
           value={formData.description}
           onChange={handleChange}
+          required
         />
         <input
           type="text"
@@ -55,6 +57,7 @@ export default function Form() {
           placeholder="Category"
           value={formData.category}
           onChange={handleChange}
+          required
         />
         <input
           type="text"
@@ -62,32 +65,10 @@ export default function Form() {
           placeholder="Amount"
           value={formData.amount}
           onChange={handleChange}
+          required
         />
         <button type="submit">Submit</button>
       </form>
-      <div>
-        <h2>Submitted Info</h2>
-        {submittedData && (
-          <div>
-            <p>
-              <strong>Name:</strong>
-              {submittedData.name}
-            </p>
-            <p>
-              <strong>Description:</strong>
-              {submittedData.description}
-            </p>
-            <p>
-              <strong>Category:</strong>
-              {submittedData.category}
-            </p>
-            <p>
-              <strong>Amount:</strong>
-              {submittedData.amount}
-            </p>
-          </div>
-        )}
-      </div>
     </div>
   );
 }
