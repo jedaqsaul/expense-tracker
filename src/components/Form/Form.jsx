@@ -10,6 +10,8 @@ export default function Form() {
     amount: "",
   });
 
+  const [submittedData, setSubmittedData] = useState(null);
+
   //Handle change for each input
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -17,16 +19,50 @@ export default function Form() {
       ...prevData,
       [name]: value,
     }));
+    console.log(formData);
+  };
+
+  //handle submitted data
+  const handleSubmit = (event) => {
+    event.preventDefault(); // this is to stop refresh
+    setSubmittedData(formData); //Here store data for later display
+    setFormData({ name: "", description: "", category: "", amount: "" }); // reset the inputs after submission
   };
 
   return (
-    <form>
-      <h2>Enter expense info</h2>
-      <input type="text" name="name" placeholder="Name" />
-      <input type="text" name="description" placeholder="Description" />
-      <input type="text" name="category" placeholder="Category" />
-      <input type="text" name="amount" placeholder="Amount" />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <h2>Enter expense info</h2>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="description"
+          placeholder="Description"
+          value={formData.description}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="category"
+          placeholder="Category"
+          value={formData.category}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="amount"
+          placeholder="Amount"
+          value={formData.amount}
+          onChange={handleChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 }
