@@ -15,6 +15,17 @@ export default function ExpenseTable({ data }) {
             <th>Amount</th>
           </tr>
         </thead>
+        <tbody>
+          {data.map((expense, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{expense.name}</td>
+              <td>{expense.description}</td>
+              <td>{expense.category}</td>
+              <td>{expense.amount}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );

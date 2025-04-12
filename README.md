@@ -25,7 +25,7 @@
 - useState({...}) -Stores form values locally
 - handleChange -Updates the form field based on input
 - handleSubmit- Prevents reload, sends data up to App
-- onAddStudent(formData)- Adds the student to the global list
+- onAddExpense(formData)- Adds the expense to the global list
 - setFormData({...}) -Resets the form after submission
 
 ## EXPENSETABLE.JSX
@@ -38,6 +38,13 @@
 
 - Receives the expense list as a prop (data)
 - Render each expense's name, description, category and amount
+
+#### what it does
+
+-props.data -Comes from App — the full list of expenses
+-.map() -Loops through expenses to create rows
+-index -Used for numbering the rows and as a key
+-Table -Displays the data clean and easy
 
 ## APP LOGIC FLOW:
 
