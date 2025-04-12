@@ -22,7 +22,17 @@ export default function App() {
   return (
     <div className="app">
       <Form onAddExpense={handleAddExpense} />
-      <ExpenseTable data={expenses} />
+
+      <div style={{ flex: 1 }}>
+        <input
+          type="text"
+          placeholder="Search byname"
+          value={searchQuery}
+          onChange={handleSearchChange}
+          className="search-bar"
+        />
+      </div>
+      <ExpenseTable data={filteredExpenses} />
     </div>
   );
 }

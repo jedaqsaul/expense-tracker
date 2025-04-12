@@ -64,3 +64,10 @@
 - State to hold the searchQuery
 - A way to filter the expenses based on that query
 - Add a search input field above the table
+
+### what it does
+
+- searchQuery Holds the text typed in the input
+- handleSearchChange Updates the searchQuery as user types
+- filteredStudents Only expenses whose name matches search
+- value + onChange Makes it a controlled input field
