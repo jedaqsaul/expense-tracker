@@ -34,6 +34,7 @@ export default function Form({ onAddExpense }) {
     <div className="form-container">
       <form onSubmit={handleSubmit} className="form">
         <h2>Add Expense</h2>
+        <p>Enter your expense details below</p>
         <input
           type="text"
           name="name"
