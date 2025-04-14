@@ -23,7 +23,12 @@ export default function ExpenseTable({ data, onDelete }) {
               <td>{expense.name}</td>
               <td>{expense.description}</td>
               <td>{expense.category}</td>
-              <td>{expense.amount}</td>
+              <td>
+                {new Intl.NumberFormat("en-KE", {
+                  style: "currency",
+                  currency: "KES",
+                }).format(expense.amount)}{" "}
+              </td>
               <td>{expense.date}</td>
               <td>
                 <button
