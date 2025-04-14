@@ -8,9 +8,8 @@ export default function Form({ onAddExpense }) {
     description: "",
     category: "",
     amount: "",
+    date: "",
   });
-
-  const [submittedData, setSubmittedData] = useState(null);
 
   //Handle change for each input
   const handleChange = (event) => {
@@ -27,7 +26,13 @@ export default function Form({ onAddExpense }) {
 
     onAddExpense(formData); //send data upto the app
 
-    setFormData({ name: "", description: "", category: "", amount: "" }); // reset the inputs after submission
+    setFormData({
+      name: "",
+      description: "",
+      category: "",
+      amount: "",
+      date: "",
+    }); // reset the inputs after submission
   };
 
   return (
@@ -64,6 +69,14 @@ export default function Form({ onAddExpense }) {
           name="amount"
           placeholder="Amount"
           value={formData.amount}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="date"
+          name="date"
+          placeholder="Date"
+          value={formData.date}
           onChange={handleChange}
           required
         />

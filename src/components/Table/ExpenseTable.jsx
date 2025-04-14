@@ -12,6 +12,7 @@ export default function ExpenseTable({ data, onDelete }) {
             <th>Description</th>
             <th>Category</th>
             <th>Amount</th>
+            <th>Date</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -23,6 +24,7 @@ export default function ExpenseTable({ data, onDelete }) {
               <td>{expense.description}</td>
               <td>{expense.category}</td>
               <td>{expense.amount}</td>
+              <td>{expense.date}</td>
               <td>
                 <button
                   onClick={() => onDelete(expense.name)}
