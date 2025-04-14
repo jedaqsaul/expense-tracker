@@ -16,8 +16,10 @@ export default function App() {
   };
 
   //Filter expenses based on search
-  const filteredExpenses = expenses.filter((expense) =>
-    expense.name.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredExpenses = expenses.filter(
+    (expense) =>
+      expense.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      expense.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
   const handleDelete = (nameToDelete) => {
     const updatedList = expenses.filter(
