@@ -92,7 +92,8 @@ This component displays the list of expenses in a neat table format.
 ## Project Links:
 
 - GitHub: https://github.com/jedaqsaul/expense-tracker
-- Live Version:
+
+- Live Version:https://67fc8c450ab4060008805230--jedaq-expense-tracker.netlify.app/
 
 ---
 
