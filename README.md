@@ -1,89 +1,99 @@
-# EXPENSE-TRACKER WITH REACT
+readme_content = """
 
-## APP.JSX
+# 💸 Expense Tracker with React
 
-- the parent component that holds the shared state(expenses) and renders both:
-- THe Form
-- The Table
+Track your expenses in real-time with a simple and elegant React app using forms, tables, and shared state.
 
-## FORM.JSX
+---
 
-- The components that contains:
-- Expense name
-- Expense description
-- Expense category
-- Expense Amount
+## `App.jsx`
 
-#### what it is supposed to do
+- Acts as the **root/parent component**
+- Holds the shared state: `expenses`
+- Renders both child components:
+  - `Form`
+  - `ExpenseTable`
 
-- Contain four input fields:name, description,category and amount
-- contain a submit button
-- Form to collect data, then send it up to App using props.onAddExpense
+---
 
-#### What happens here
+## `Form.jsx`
 
-- useState({...}) -Stores form values locally
-- handleChange -Updates the form field based on input
-- handleSubmit- Prevents reload, sends data up to App
-- onAddExpense(formData)- Adds the expense to the global list
-- setFormData({...}) -Resets the form after submission
+The component responsible for capturing new expense data.
 
-## EXPENSETABLE.JSX
+### Fields Included:
 
-- The component that:
-- Receives the list of expenses as props from App
-- Renders them as rows in a table
+- **Expense Name**
+- **Description**
+- **Category**
+- **Amount**
+- (Optional: **Date**)
 
-#### What it is supposed to do
+### What It Does:
 
-- Receives the expense list as a prop (data)
-- Render each expense's name, description, category and amount
+- Contains 4+ input fields
+- Has a **submit** button
+- Uses `props.onAddExpense()` to send the data up to `App.jsx`
 
-#### what it does
+### Under the Hood:
 
--props.data -Comes from App — the full list of expenses
--.map() -Loops through expenses to create rows
--index -Used for numbering the rows and as a key
--Table -Displays the data clean and easy
+- `useState({})` → Stores form values locally
+- `handleChange()` → Updates form fields on input
+- `handleSubmit()` → Prevents reload and sends form data to `App.jsx`
+- `setFormData({})` → Clears the form after submission
 
-## APP LOGIC FLOW:
+---
 
-1. App.jsx holds the list of expenses in state using useState([])
-2. Form.jsx collects form input and passes a new expense object up to App
-3. App.jsx updates the list using setExpenses([...expenses, newExpense])
-4. ExpenseTable.jsx receives the updated list and renders the table.
+## `ExpenseTable.jsx`
 
-## Additional features
+This component displays the list of expenses in a neat table format.
 
-- Add a search input above the table
-- As the user tpes, shows only expensess whose names include the text
-  -Real-time filtering
+### What It Does:
 
-### What do we need
+- Receives `props.data` (the expense list) from `App.jsx`
+- Uses `.map()` to loop through and render each entry as a row
+- Displays:
+  - **Expense Name**
+  - **Description**
+  - **Category**
+  - **Amount (formatted as KSh)**
+- Uses `index` for row numbering and `key` prop
 
-- State to hold the searchQuery
-- A way to filter the expenses based on that query
-- Add a search input field above the table
+---
 
-### what it does
+## App Logic Flow
 
-- searchQuery Holds the text typed in the input
-- handleSearchChange Updates the searchQuery as user types
-- filteredStudents Only expenses whose name matches search
-- value + onChange Makes it a controlled input field
+1. `App.jsx` holds the list of expenses using `useState([])`
+2. `Form.jsx` collects form data and sends it up using `onAddExpense()`
+3. `App.jsx` updates the list using:
+   ```js
+   setExpenses([...expenses, newExpense]);
+   ```
 
-### Add a delete expense functionality
+## Final Thoughts
 
-- Add a delete button beside each expense row in the table
-- When clicked, it removes that expense from the list
+- This project covers:
 
-#### what we need
+- React Forms
 
-- A handleDelete function App.jsx
-- Pass that function to ExpenseTable.jsx
-- Add a delete button in each table row, and hook it up
+- useState Hooks
 
-#### what it does
+- Props & State Sharing
 
-- Now each row has a delte button. Clicking it removes that student from the list and re-renders the UI
-- No reload needed.clean.instant
+- Component Reusability
+
+- Data Mapping
+
+- Controlled Inputs
+
+- Basic Filtering
+
+- Dynamic Deletion
+
+## Project Links:
+
+- GitHub: https://github.com/jedaqsaul/expense-tracker
+- Live Version:
+
+---
+
+### Built with by [Aquila Jedidia] https://github.com/jedaqsaul
