@@ -10,7 +10,6 @@ export default function Form({ onAddExpense }) {
     amount: "",
     date: "",
   });
-
   //Handle change for each input
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -65,12 +64,14 @@ export default function Form({ onAddExpense }) {
           required
         />
         <input
-          type="text"
+          type="number"
           name="amount"
           placeholder="Amount"
           value={formData.amount}
           onChange={handleChange}
           required
+          min="0"
+          step="100"
         />
         <input
           type="date"
